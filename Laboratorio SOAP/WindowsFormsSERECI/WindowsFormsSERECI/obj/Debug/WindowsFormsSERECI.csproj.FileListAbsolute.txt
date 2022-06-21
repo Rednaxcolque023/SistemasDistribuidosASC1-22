@@ -1,0 +1,14 @@
+C:\Users\Alexander S\source\repos\WindowsFormsSERECI\WindowsFormsSERECI\obj\Debug\WindowsFormsSERECI.csproj.AssemblyReference.cache
+C:\Users\Alexander S\source\repos\WindowsFormsSERECI\WindowsFormsSERECI\obj\Debug\WindowsFormsSERECI.Form1.resources
+C:\Users\Alexander S\source\repos\WindowsFormsSERECI\WindowsFormsSERECI\obj\Debug\WindowsFormsSERECI.Properties.Resources.resources
+C:\Users\Alexander S\source\repos\WindowsFormsSERECI\WindowsFormsSERECI\obj\Debug\WindowsFormsSERECI.csproj.GenerateResource.cache
+C:\Users\Alexander S\source\repos\WindowsFormsSERECI\WindowsFormsSERECI\obj\Debug\WindowsFormsSERECI.csproj.CoreCompileInputs.cache
+C:\Users\Alexander S\source\repos\WindowsFormsSERECI\WindowsFormsSERECI\bin\Debug\WindowsFormsSERECI.exe.config
+C:\Users\Alexander S\source\repos\WindowsFormsSERECI\WindowsFormsSERECI\bin\Debug\WindowsFormsSERECI.exe
+C:\Users\Alexander S\source\repos\WindowsFormsSERECI\WindowsFormsSERECI\bin\Debug\WindowsFormsSERECI.pdb
+C:\Users\Alexander S\source\repos\WindowsFormsSERECI\WindowsFormsSERECI\obj\Debug\WindowsFormsSERECI.exe
+C:\Users\Alexander S\source\repos\WindowsFormsSERECI\WindowsFormsSERECI\obj\Debug\WindowsFormsSERECI.pdb
+C:\Users\Alexander S\source\repos\WindowsFormsSERECI\WindowsFormsSERECI\obj\Debug\WindowsFormsSERECI.Form2.resources
+C:\Users\Alexander S\source\repos\WindowsFormsSERECI\WindowsFormsSERECI\obj\Debug\WindowsFormsSERECI.FormFormulario.resources
+C:\Users\Alexander S\source\repos\WindowsFormsSERECI\WindowsFormsSERECI\obj\Debug\WindowsFormsSERECI.Form3.resources
+C:\Users\Alexander S\source\repos\WindowsFormsSERECI\WindowsFormsSERECI\obj\Debug\WindowsFormsSERECI.Form4.resources
