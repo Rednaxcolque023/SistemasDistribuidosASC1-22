@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="obtenerContizacion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cotizacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="obtenerContizacionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obtenerContizacionResult" type="tns:Moneda" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Moneda">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="moneda" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="obtenerContizacionSoapIn">
+    <wsdl:part name="parameters" element="tns:obtenerContizacion" />
+  </wsdl:message>
+  <wsdl:message name="obtenerContizacionSoapOut">
+    <wsdl:part name="parameters" element="tns:obtenerContizacionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebServiceBANCOSoap">
+    <wsdl:operation name="obtenerContizacion">
+      <wsdl:input message="tns:obtenerContizacionSoapIn" />
+      <wsdl:output message="tns:obtenerContizacionSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServiceBANCOSoap" type="tns:WebServiceBANCOSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="obtenerContizacion">
+      <soap:operation soapAction="http://tempuri.org/obtenerContizacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServiceBANCOSoap12" type="tns:WebServiceBANCOSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="obtenerContizacion">
+      <soap12:operation soapAction="http://tempuri.org/obtenerContizacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebServiceBANCO">
+    <wsdl:port name="WebServiceBANCOSoap" binding="tns:WebServiceBANCOSoap">
+      <soap:address location="http://localhost:64538/WebServiceBANCO.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServiceBANCOSoap12" binding="tns:WebServiceBANCOSoap12">
+      <soap12:address location="http://localhost:64538/WebServiceBANCO.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

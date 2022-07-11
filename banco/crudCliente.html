@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="tabla">
+        
+    </div>
+    <div id="botones">
+        <button onclick="listar">Listar</button>
+        <button>Insertar</button>
+    </div>
+
+    <script>
+        var ruta="localhost:8000/api/clientes";
+        function listar(){
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', ruta+'clientes', true);
+            xhr.onload = function(){
+                if(this.status === 200){
+                    clientes = this.responseText();
+                    clientes = JSON.parse(clientes);
+                    var tabla = document.getElementById('tabla');
+                    var html = '';
+                    for(var i=0; i<clientes.length; i++){
+                        html += '<tr>';
+                        html += '<td>'+clientes[i].id+'</td>';
+                        html += '<td>'+clientes[i].nombres+'</td>';
+                        html += '<td>'+clientes[i].apellidos+'</td>';
+                        html += '<td>'+clientes[i].ci+'</td>';
+                        html += '<td>'+clientes[i].direccion+'</td>';
+                        html += '<td>'+clientes[i].telefono+'</td>';
+                        html += '<td>'+clientes[i].email+'</td>';
+                        html += '<td>'+clientes[i].sexo+'</td>';
+                        html+='<td><button onclick="editar('+clientes[i].id+')">Editar</button></td>';
+                        html+='<td><button onclick="eliminar('+clientes[i].id+')">Eliminar</button></td>';
+                        
+                        html += '</tr>';
+                    }
+                    html+='</table>';
+                    tabla.innerHTML = html;
+                }
+            }
+            xhr.send();
+        }
+        listar();
+    </script>
+</body>
+</html>
